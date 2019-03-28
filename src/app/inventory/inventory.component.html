@@ -1,0 +1,80 @@
+<div class="row no-gutters">
+  <div class="col-md-3" style="height: 90vh; background: #E6E6E6;">
+
+    <div class="lateral-menu-body">
+      <ul style="list-style-type: none; padding-left:0px;">
+        <li class="sidemenu-element" *ngIf="viewCurrent != 1" (click)="viewCurrentSection(1)">
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons">keyboard_arrow_right</i></div>
+            <div class="col-md-10"><span>Incluir Paciente</span></div>
+          </div>
+        </li>
+        <li class="sidemenu-element" style="padding-left:10px;background-color: #1FA4F1;" *ngIf="viewCurrent == 1">
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons" style="color: #EC407A!important;">keyboard_arrow_right</i></div>
+            <div class="col-md-10"><span>Incluir Paciente</span></div>
+          </div>
+        </li>
+
+        <li class="sidemenu-element" *ngIf="viewCurrent != 2" (click)="viewCurrentSection(2)">
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons">keyboard_arrow_right</i></div>
+            <div class="col-md-10"><span>Pedir Cita</span></div>
+          </div>
+        </li>
+        <li class="sidemenu-element" style="padding-left:10px;background-color: #1FA4F1;" *ngIf="viewCurrent == 2">
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons" style="color: #EC407A!important;">keyboard_arrow_right</i></div>
+            <div class="col-md-10"><span>Pedir Cita</span></div>
+          </div>
+        </li>
+
+        <li class="sidemenu-element" *ngIf="viewCurrent != 3" (click)="viewCurrentSection(3)">
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons">keyboard_arrow_right</i></div>
+            <div class="col-md-10"><span>Calendario de Pacientes</span></div>
+          </div>
+        </li>
+        <li class="sidemenu-element" style="padding-left:10px;background-color: #1FA4F1;" *ngIf="viewCurrent == 3">
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons" style="color: #EC407A!important;">keyboard_arrow_right</i></div>
+            <div class="col-md-10"><span>Calendario de Pacientes</span></div>
+          </div>
+        </li>
+
+        <li class="sidemenu-element" *ngIf="viewCurrent != 4" (click)="viewCurrentSection(4)">
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons">keyboard_arrow_right</i></div>
+            <div class="col-md-10"><span>Reportes</span></div>
+          </div>
+        </li>
+        <li class="sidemenu-element" style="padding-left:10px;background-color: #1FA4F1;" *ngIf="viewCurrent == 4">
+          <div class="row">
+            <div class="col-md-2"><i class="material-icons" style="color: #EC407A!important;">keyboard_arrow_right</i></div>
+            <div class="col-md-10"><span>Reportes</span></div>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-9" style="height: 90vh; background: white;">
+
+      <div autofocus>
+        <app-client *ngIf="viewCurrent == 1">
+        </app-client>
+
+        <app-citas *ngIf="viewCurrent == 2">
+        </app-citas>
+      
+        <app-calendar *ngIf="viewCurrent == 3">
+        </app-calendar>
+      
+        <app-reports *ngIf="viewCurrent == 4">
+        </app-reports>
+      </div>
+
+  </div>
+</div>
+

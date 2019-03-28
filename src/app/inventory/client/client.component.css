@@ -1,0 +1,32 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+
+.example-full-width {
+    width: 70%;
+    margin-right: 20px;
+}
+
+.LabelWidth{
+    width: 90% !important;
+    margin-bottom: 20px!important;
+    padding-left: 20px!important;
+}
+
+.button-client{
+    right: 22px;
+    background: #1FA4F1;
+    color: white;
+}
+
+.save-info{
+    margin-top: 5px;
+    width: 100%;
+    height: 40px;
+    padding-top: 2px;
+    font-size: 14px;
+    font-weight: 400;
+    font-family: Roboto,Helvetica Neue,sans-serif;
+}

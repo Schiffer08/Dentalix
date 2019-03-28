@@ -1,0 +1,23 @@
+.body {
+    background: url("/src/assets/bglogin.jpg");
+}
+
+.formLogin{
+    margin-left: 41%;
+    margin-top: 3%;
+    /* background: gray; */
+    width: 19%;
+}
+
+.title{
+    text-align: center;
+    color: blue;
+    font-style: italic;
+    font-family: algerian;
+    margin-top: 35px;
+    font-size: 4.5rem;
+}
+
+.dentalix-blue{
+    color:#1a3a77;
+  }

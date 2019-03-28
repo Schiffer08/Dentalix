@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-md-12 body">
+    <div>
+      <h1 class="title">
+        DENTALIX
+      </h1>
+    </div>
+    
+      <div id="form-client-info">
+        <form [formGroup]="loginForm">
+        <!-- <form [formGroup]="loginForm" (ngSubmit)="savePersonalInfo(personalInfoForm.value)"> -->
+          <div class="row formLogin">
+  
+            <div class="col-md-12" style="left: 15px;">
+              <mat-form-field>
+                <input matInput placeholder="Usuario" type="text" [formControl]="loginForm.controls['user']">
+              </mat-form-field>
+            </div>
+            <div class="col-md-12" style="left: 15px;">
+              <mat-form-field>
+                <input matInput placeholder="Contraseña" type="password" [formControl]="loginForm.controls['password']">
+              </mat-form-field>
+            </div>
+
+            <div class="col-md-12" style="left: 40px;">
+              <button [disabled]="!loginForm.valid" type="submit" no-outline class="button-client"mat-raised-button>INICIAR SESIÓN</button>
+            </div>
+            <div class="col-md-12" style="margin-top: 10px;">
+              <a routerLink="/register" routerLinkActive="active">
+                <p style="cursor: pointer" class="dentalix-blue">¿No tienes cuenta?, Regístrate</p>
+              </a>
+            </div>
+            <div class="col-md-12">
+              <a routerLink="/forgout" routerLinkActive="active">
+                <p style="cursor: pointer" class="dentalix-blue">¿Olvidaste tu contraseña?</p>
+              </a>
+            </div>
+    
+          </div>
+    
+        </form>
+      </div>
+
+  </div>
+</div>

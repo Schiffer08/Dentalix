@@ -1,0 +1,104 @@
+<mat-card>
+  <div class="row">
+    <div class="col-md-12">
+      <span class="s30 f300 Roboto font-grey">Incluir cliente</span>&nbsp;&nbsp;&nbsp;
+      <span class="robotocondensed-font s18 font-grey" style="color:#ed5565;">*</span>
+      <span class="robotocondensed-font s18 font-grey">(Campos obligatorios)</span>
+    </div>
+  </div>
+  <hr>
+
+  <div id="form-client-info" style="width:100%; height: 72.5vh;">
+    <form [formGroup]="clientInfoForm">
+    <!-- <form [formGroup]="clientInfoForm" (ngSubmit)="savePersonalInfo(personalInfoForm.value)"> -->
+      <div class="row">
+
+        <div class="col-md-6">
+          <span class="robotocondensed-font s18 social-grey" style="color:#ed5565;position:absolute;">*</span>
+          <mat-form-field class="LabelWidth">
+            <input matInput placeholder="Primer nombre" type="text" [formControl]="clientInfoForm.controls['firstName']">
+            <mat-hint *ngIf="clientInfoForm.get('firstName').hasError('required') && clientInfoForm.get('firstName').touched">
+              ¡Este campo es requerido!
+            </mat-hint>
+            <mat-hint *ngIf="clientInfoForm.get('firstName').hasError('pattern') && clientInfoForm.get('firstName').touched">
+              ¡No puede introducir números en este campo!
+            </mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="LabelWidth">
+            <input matInput placeholder="Segundo nombre" type="text" [formControl]="clientInfoForm.controls['secondName']">
+            <mat-hint *ngIf="clientInfoForm.get('secondName').hasError('pattern') && clientInfoForm.get('secondName').touched">
+              ¡No puede introducir números en este campo!
+            </mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-6">
+          <span class="robotocondensed-font s18 social-grey" style="color:#ed5565;position:absolute;">*</span>
+          <mat-form-field class="LabelWidth">
+            <input matInput placeholder="Primer apellido" type="text" [formControl]="clientInfoForm.controls['firstSurname']">
+            <mat-hint *ngIf="clientInfoForm.get('firstSurname').hasError('required') && clientInfoForm.get('firstSurname').touched">
+              ¡Este campo es requerido!
+            </mat-hint>
+            <mat-hint *ngIf="clientInfoForm.get('firstSurname').hasError('pattern') && clientInfoForm.get('firstSurname').touched">
+              ¡No puede introducir números en este campo!
+            </mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="LabelWidth">
+            <input matInput placeholder="Segundo apellido" type="text" [formControl]="clientInfoForm.controls['secondSurname']">
+            <mat-hint *ngIf="clientInfoForm.get('secondSurname').hasError('pattern') && clientInfoForm.get('secondSurname').touched">
+              ¡No puede introducir números en este campo!
+            </mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-6">
+          <span class="robotocondensed-font s18 social-grey" style="color:#ed5565;position:absolute;">*</span>
+          <mat-form-field class="LabelWidth">
+            <input matInput placeholder="Cédula de identidad" type="text" [formControl]="clientInfoForm.controls['ci']">
+            <mat-hint *ngIf="clientInfoForm.get('ci').hasError('required') && clientInfoForm.get('ci').touched">
+              ¡Este campo es requerido!
+            </mat-hint>
+            <mat-hint *ngIf="clientInfoForm.get('ci').hasError('pattern') && clientInfoForm.get('ci').touched">
+              ¡No puede introducir letras en este campo!
+            </mat-hint>
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="LabelWidth">
+            <input matInput placeholder="Número de teléfono" type="text" [formControl]="clientInfoForm.controls['phone']">
+            <mat-hint *ngIf="clientInfoForm.get('phone').hasError('pattern') && clientInfoForm.get('phone').touched">
+              ¡No puede introducir letras en este campo!
+            </mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-6">
+          <mat-form-field class="LabelWidth">
+            <input matInput placeholder="Zona de residencia" type="text" [formControl]="clientInfoForm.controls['residence']">
+          </mat-form-field>
+        </div>
+        <div class="col-md-6">
+          <mat-form-field class="LabelWidth">
+            <input matInput placeholder="Correo electrónico" type="text" [formControl]="clientInfoForm.controls['email']" (keydown.space)="$event.preventDefault()">
+            <mat-hint *ngIf="clientInfoForm.get('email').hasError('pattern') && clientInfoForm.get('email').touched">
+              ¡El correo electrónico que introdujo es inválido!
+            </mat-hint>
+          </mat-form-field>
+        </div>
+
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+          <button [disabled]="!clientInfoForm.valid" type="submit" no-outline class="LabelWidth button-client"mat-raised-button>GUARDAR</button>
+        </div>
+
+      </div>
+
+    </form>
+  </div>
+
+
+</mat-card>

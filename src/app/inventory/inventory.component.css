@@ -1,0 +1,37 @@
+.lateral-menu-body{
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1abc9c+0,47ffbb+100 */
+  background-color:  #4DB8F6; 
+  padding-top: 0;
+  height:90vh;
+}
+
+.sidemenu-element .material-icons{
+    color: #1FA4F1;
+}
+
+.sidemenu-element i{
+    color:  #1FA4F1;
+}
+
+.sidemenu-element {
+    cursor: pointer;
+    height: calc(85vh / 10);
+    color: white;
+    padding-top: 3vh;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+.sidemenu-element:hover{
+    background-color: #1FA4F1;
+    color: white;
+    padding-left: 10px;
+    -webkit-transition: all 300ms ease-in-out;
+    -moz-transition: all 300ms ease-in-out;
+    -ms-transition: all 300ms ease-in-out;
+    -o-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}

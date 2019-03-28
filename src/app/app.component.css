@@ -1,0 +1,28 @@
+.navbar-color {
+    background-color: #81DAF5;
+}
+
+.menu-lateral {
+    width: 85%;
+    margin: auto;
+}
+
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(.4,0,.2,1);
+    display: block;
+    position: relative;
+    padding: 24px;
+    border-radius: 2px;
+    background: #fff;
+    color: rgba(0,0,0,.87);
+    height: 85vh;
+    width: 73vw;
+    top: 15px;
+    left: 15px;
+}
+
+.menu-icons {
+	color:white;
+    cursor: pointer;
+    font-size: 17px!important;
+}
